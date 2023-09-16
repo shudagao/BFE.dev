@@ -21,5 +21,18 @@
   "bugs": {
     "url": "https://github.com/FErookie-shuda/BFE.dev/issues"
   },
-  "homepage": "https://github.com/FErookie-shuda/BFE.dev#readme"
+  "homepage": "https://github.com/FErookie-shuda/BFE.dev#readme",
+  "devDependencies": {
+    "@babel/cli": "^7.22.15",
+    "@babel/core": "^7.22.19",
+    "@babel/preset-env": "^7.22.15",
+    "@babel/preset-typescript": "^7.22.15",
+    "@types/jest": "^29.5.5",
+    "@typescript-eslint/eslint-plugin": "^6.7.0",
+    "@typescript-eslint/parser": "^6.7.0",
+    "eslint": "^8.49.0",
+    "jest": "^29.7.0",
+    "ts-jest": "^29.1.1",
+    "typescript": "^5.2.2"
+  }
 }
