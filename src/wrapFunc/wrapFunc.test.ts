@@ -1,7 +1,7 @@
 import { warpFunc } from './wrapFunc';
 
 describe('test warpFunc', () => {
-    const funX = function(...arg) {
+    const funX = function(...arg: any[]) {
         if (!arg.length) return 0;
         return arg.reduce((x, y)=> x + y);
     }
@@ -10,13 +10,13 @@ describe('test warpFunc', () => {
         try {
             // @ts-ignore
             warpFunc();
-        } catch(e) {
+        } catch(e: any) {
             expect(e.message).toBe('first param must be function');
         }
         try {
             // @ts-ignore
             warpFunc(1)(1)();
-        } catch(e) {
+        } catch(e: any) {
             expect(e.message).toBe('first param must be function');
         }
     });

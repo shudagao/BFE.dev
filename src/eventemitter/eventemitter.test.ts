@@ -4,7 +4,7 @@ describe('test events', () => {
         let i = 0;
         const emitter = new Emitter<number>();
 
-        const handler = (num) => {
+        const handler = (num: number) => {
             i += num;
         };
 
@@ -26,7 +26,7 @@ describe('test events', () => {
         let i = 0;
         const emitter = new Emitter<number>();
 
-        const handler = (num) => {
+        const handler = (num: number) => {
             i += num;
         };
 
@@ -46,7 +46,7 @@ describe('test events', () => {
 
         let i = 0;
 
-        const handler = (num) => {
+        const handler = (num: number) => {
             i += num;
         };
 

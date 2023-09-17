@@ -1,7 +1,7 @@
 import { safeGet } from "./safeget"; 
 
 describe('test safeget', () => {
-    let safeObj;
+    let safeObj: any;
     beforeAll(() => {
         safeObj = safeGet({
             a: 'hello',
@@ -12,8 +12,7 @@ describe('test safeget', () => {
     test('add get', () => {
         expect(safeObj.a()).toBe('hello');
         expect(safeObj.c[0]()).toBe(-100);
-    });
-    test('add set', () => {
+
         expect(safeObj.c[100]()).toBeUndefined();
         expect(safeObj.c[100](1234)).toBe(1234);
         expect(safeObj.d.e()).toBeUndefined();
@@ -21,7 +20,7 @@ describe('test safeget', () => {
         expect(safeObj.y.z.a.b.c.d.e.f.g.h.i.j.k()).toBeUndefined();
     });
     test('add iterator', () => {
-        expect(safeObj.c.map((e) => e())).toStrictEqual([-100, 200, -300]);
+        expect(safeObj.c.map((e: any) => e())).toStrictEqual([-100, 200, -300]);
     });
 });
   

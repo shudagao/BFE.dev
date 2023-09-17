@@ -3,7 +3,7 @@ export function warpFunc(func: (...args: any[]) => any) {
     if (typeof func !== 'function') {
         throw new Error('first param must be function');
     }
-    const accumulatedArgs = [];
+    const accumulatedArgs: any[] = [];
     return function warpedFunc(...args: any[]): any {
         accumulatedArgs.push(...args);
         if (args.length === 0) {
