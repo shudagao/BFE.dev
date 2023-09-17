@@ -6,7 +6,7 @@ module.exports = {
             sourceType: 'module',
         },
     },
-    extends: ['eslint:recommended', 'plugin:@typescript-eslint/recommended'],
+    extends: ['airbnb', 'eslint:recommended', 'plugin:@typescript-eslint/recommended'],
     parser: '@typescript-eslint/parser',
     plugins: ['@typescript-eslint'],
     root: true,
